@@ -37,3 +37,12 @@ uv run nox -s typecheck
 # Run everything
 uv run nox
 ```
+
+### Updating dependencies
+
+After modifying `pyproject.toml` or adding packages with `uv add`, regenerate
+`uv.lock`:
+
+```bash
+uv lock --upgrade
+```

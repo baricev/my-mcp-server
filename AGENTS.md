@@ -57,34 +57,6 @@ uv run cz commit  # or simply `cz c`
 The `commitizen` pre-commit hook validates commit messages during the
 `commit-msg` stage.
 
+## Note
 
-## `pipx` installed libraries:
-
-The Codex container comes with a number of pre-installed Python libraries.
-
-```bash
-pipx list
-
-venvs are in /root/.local/share/pipx/venvs
-apps are exposed on your $PATH at /root/.local/bin
-manual pages are exposed at /root/.local/share/man
-   package clang-format 20.1.6, installed using Python 3.12.3
-    - clang-format
-    - clang-format-diff.py
-    - git-clang-format
-   package clang-tidy 20.1.0, installed using Python 3.12.3
-    - clang-tidy
-   package cmakelang 0.6.13, installed using Python 3.12.3
-    - cmake-annotate
-    - cmake-format
-    - cmake-genparsers
-    - cmake-lint
-    - ctest-to
-   package cpplint 2.0.2, installed using Python 3.12.3
-    - cpplint
-   package poetry 2.1.3, installed using Python 3.12.3
-    - poetry
-   package uv 0.7.13, installed using Python 3.12.3
-    - uv
-    - uvx
-```
+The Codex container includes many common utilities installed via `pipx`. Run `pipx list` if you need to see the available tools.
