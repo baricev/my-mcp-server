@@ -66,9 +66,6 @@ manual pages are exposed at /root/.local/share/man
     - ctest-to
    package cpplint 2.0.2, installed using Python 3.12.3
     - cpplint
-   package nox 2025.5.1, installed using Python 3.12.3
-    - nox
-    - tox-to-nox
    package poetry 2.1.3, installed using Python 3.12.3
     - poetry
    package uv 0.7.13, installed using Python 3.12.3
