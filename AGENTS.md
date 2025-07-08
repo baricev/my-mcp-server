@@ -27,9 +27,9 @@ This project uses `uv` for dependency management and `pre-commit` for code quali
   ```bash
   uv run mypy .
   ```
-- Run tests:
+- Run tests (in parallel):
   ```bash
-  uv run pytest
+  uv run pytest -n auto
   ```
 
 For new commits, run the hooks against staged files:
