@@ -1,6 +1,6 @@
 # Repository instructions
 
-This project uses `uv` for dependency management and `pre-commit` for code quality checks.
+This project uses `uv` for dependency management, `pre-commit` for code quality checks, and `commitizen` for semantic versioning.
 
 ## Setup
 
@@ -27,9 +27,18 @@ This project uses `uv` for dependency management and `pre-commit` for code quali
   ```bash
   uv run nox -s typecheck
   ```
-- Run tests:
+- Run tests (in parallel):
   ```bash
   uv run nox -s tests
+  ```
+  or use
+  
+  ```
+  uv run pytest -n auto
+  ```
+- Bump the project version:
+  ```bash
+  cz bump
   ```
 
 Run a specific session with `uv run nox -s <session>` or run all sessions with `uv run nox`.
@@ -47,6 +56,18 @@ Or run the hooks against all staged files:
 ```bash
 uv run pre-commit --all-files
 ```
+
+## Commit messages
+
+Commit messages **must** follow the Conventional Commits specification. Use
+`commitizen` to craft your messages:
+
+```bash
+uv run cz commit  # or simply `cz c`
+```
+
+The `commitizen` pre-commit hook validates commit messages during the
+`commit-msg` stage.
 
 
 ## Note
