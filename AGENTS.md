@@ -12,6 +12,10 @@ This project uses `uv` for dependency management and `pre-commit` for code quali
   ```bash
   uv run pre-commit install
   ```
+- If you change dependencies, regenerate `uv.lock`:
+  ```bash
+  uv pip compile
+  ```
 
 ## Development workflow
 
