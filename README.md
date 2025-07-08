@@ -23,14 +23,14 @@ import my_mcp_server
 uv sync
 
 # Run tests
-uv run pytest
+nox -s tests
 
 # Format code
 uv run pyink .
 
 # Lint code
-uv run ruff check .
+nox -s lint
 
 # Type check
-uv run mypy .
+nox -s typecheck
 ```
