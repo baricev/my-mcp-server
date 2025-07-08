@@ -27,9 +27,9 @@ This project uses `uv` for dependency management, `pre-commit` for code quality 
   ```bash
   uv run mypy .
   ```
-- Run tests:
+- Run tests (in parallel):
   ```bash
-  uv run pytest
+  uv run pytest -n auto
   ```
 - Bump the project version:
   ```bash
