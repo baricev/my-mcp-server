@@ -17,7 +17,7 @@ This project uses `uv` for dependency management and `pre-commit` for code quali
 
 - Format code:
   ```bash
-  uv run pyink .
+  uv run nox -s format
   ```
 - Lint and auto-fix:
   ```bash
@@ -30,6 +30,10 @@ This project uses `uv` for dependency management and `pre-commit` for code quali
 - Run tests:
   ```bash
   uv run pytest
+  ```
+- Run all sessions:
+  ```bash
+  uv run nox -s all
   ```
 
 For new commits, run the hooks against staged files:

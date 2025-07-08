@@ -26,7 +26,7 @@ uv sync
 uv run nox -s tests
 
 # Format code
-uv run pyink .
+uv run nox -s format
 
 # Lint code
 uv run nox -s lint
@@ -35,5 +35,5 @@ uv run nox -s lint
 uv run nox -s typecheck
 
 # Run everything
-uv run nox
+uv run nox -s all
 ```
