@@ -1,6 +1,6 @@
 # Repository instructions
 
-This project uses `uv` for dependency management and `pre-commit` for code quality checks.
+This project uses `uv` for dependency management, `pre-commit` for code quality checks, and `commitizen` for semantic versioning.
 
 ## Setup
 
@@ -30,6 +30,10 @@ This project uses `uv` for dependency management and `pre-commit` for code quali
 - Run tests:
   ```bash
   uv run pytest
+  ```
+- Bump the project version:
+  ```bash
+  cz bump
   ```
 
 For new commits, run the hooks against staged files:
