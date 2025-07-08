@@ -45,6 +45,18 @@ Or run the hooks against all staged files:
 uv run pre-commit --all-files
 ```
 
+## Commit messages
+
+Commit messages **must** follow the Conventional Commits specification. Use
+`commitizen` to craft your messages:
+
+```bash
+uv run cz commit  # or simply `cz c`
+```
+
+The `commitizen` pre-commit hook validates commit messages during the
+`commit-msg` stage.
+
 
 ## `pipx` installed libraries:
 
