@@ -2,9 +2,15 @@ import nox
 
 
 @nox.session
+def format(session: nox.Session) -> None:
+  """Format the codebase using Pyink."""
+  session.run("uv", "run", "pyink", ".", external=True)
+
+
+@nox.session
 def lint(session: nox.Session) -> None:
   """Run Ruff to lint the project."""
-  session.run("uv", "run", "ruff", "check", ".", external=True)
+  session.run("uv", "run", "ruff", "check", ".", "--fix", external=True)
 
 
 @nox.session

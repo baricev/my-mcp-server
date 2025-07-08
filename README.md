@@ -21,12 +21,10 @@ import my_mcp_server
 ```bash
 # Install dependencies
 uv sync
-
-# Run tests
-uv run nox -s tests
+uv run pre-commit install
 
 # Format code
-uv run pyink .
+uv run nox -s format
 
 # Lint code
 uv run nox -s lint
@@ -34,6 +32,18 @@ uv run nox -s lint
 # Type check
 uv run nox -s typecheck
 
+# Run tests
+uv run nox -s tests
+
 # Run everything
 uv run nox
+```
+
+### Updating dependencies
+
+After modifying `pyproject.toml` or adding packages with `uv add`, regenerate
+`uv.lock`:
+
+```bash
+uv lock --upgrade
 ```

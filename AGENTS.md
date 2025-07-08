@@ -17,20 +17,27 @@ This project uses `uv` for dependency management and `pre-commit` for code quali
 
 - Format code:
   ```bash
-  uv run pyink .
+  uv run nox -s format
   ```
 - Lint and auto-fix:
   ```bash
-  uv run ruff check . --fix
+  uv run nox -s lint
   ```
 - Type check:
   ```bash
-  uv run mypy .
+  uv run nox -s typecheck
   ```
 - Run tests:
   ```bash
-  uv run pytest
+  uv run nox -s tests
   ```
+
+Run a specific session with `uv run nox -s <session>` or run all sessions with `uv run nox`.
+
+After updating dependencies, regenerate `uv.lock` with:
+```bash
+uv lock --upgrade
+```
 
 For new commits, run the hooks against staged files:
 ```bash
@@ -42,33 +49,6 @@ uv run pre-commit --all-files
 ```
 
 
-## `pipx` installed libraries:
+## Note
 
-The Codex container comes with a number of pre-installed Python libraries.
-
-```bash
-pipx list
-
-venvs are in /root/.local/share/pipx/venvs
-apps are exposed on your $PATH at /root/.local/bin
-manual pages are exposed at /root/.local/share/man
-   package clang-format 20.1.6, installed using Python 3.12.3
-    - clang-format
-    - clang-format-diff.py
-    - git-clang-format
-   package clang-tidy 20.1.0, installed using Python 3.12.3
-    - clang-tidy
-   package cmakelang 0.6.13, installed using Python 3.12.3
-    - cmake-annotate
-    - cmake-format
-    - cmake-genparsers
-    - cmake-lint
-    - ctest-to
-   package cpplint 2.0.2, installed using Python 3.12.3
-    - cpplint
-   package poetry 2.1.3, installed using Python 3.12.3
-    - poetry
-   package uv 0.7.13, installed using Python 3.12.3
-    - uv
-    - uvx
-```
+The Codex container includes many common utilities installed via `pipx`. Run `pipx list` if you need to see the available tools.
