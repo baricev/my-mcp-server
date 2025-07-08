@@ -10,7 +10,7 @@ This project uses `uv` for dependency management and `pre-commit` for code quali
   ```
 - Install git hooks:
   ```bash
-  pre-commit install
+  uv run pre-commit install
   ```
 
 ## Development workflow
@@ -34,5 +34,44 @@ This project uses `uv` for dependency management and `pre-commit` for code quali
 
 For new commits, run the hooks against staged files:
 ```bash
-pre-commit run --files <files>
+uv run pre-commit --files <files>
+```
+Or run the hooks against all staged files:
+```bash
+uv run pre-commit --all-files
+```
+
+
+## `pipx` installed libraries:
+
+The Codex container comes with a number of pre-installed Python libraries.
+
+```bash
+pipx list
+
+venvs are in /root/.local/share/pipx/venvs
+apps are exposed on your $PATH at /root/.local/bin
+manual pages are exposed at /root/.local/share/man
+   package clang-format 20.1.6, installed using Python 3.12.3
+    - clang-format
+    - clang-format-diff.py
+    - git-clang-format
+   package clang-tidy 20.1.0, installed using Python 3.12.3
+    - clang-tidy
+   package cmakelang 0.6.13, installed using Python 3.12.3
+    - cmake-annotate
+    - cmake-format
+    - cmake-genparsers
+    - cmake-lint
+    - ctest-to
+   package cpplint 2.0.2, installed using Python 3.12.3
+    - cpplint
+   package nox 2025.5.1, installed using Python 3.12.3
+    - nox
+    - tox-to-nox
+   package poetry 2.1.3, installed using Python 3.12.3
+    - poetry
+   package uv 0.7.13, installed using Python 3.12.3
+    - uv
+    - uvx
 ```

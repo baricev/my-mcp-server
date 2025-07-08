@@ -7,7 +7,7 @@ Add your project description here.
 ### Installation
 
 ```bash
-pip install my-mcp-server
+uv pip install my-mcp-server
 ```
 
 ## Usage
@@ -23,14 +23,17 @@ import my_mcp_server
 uv sync
 
 # Run tests
-nox -s tests
+uv run nox -s tests
 
 # Format code
 uv run pyink .
 
 # Lint code
-nox -s lint
+uv run nox -s lint
 
 # Type check
-nox -s typecheck
+uv run nox -s typecheck
+
+# Run everything
+uv run nox
 ```
