@@ -76,3 +76,9 @@ The `commitizen` pre-commit hook validates commit messages during the
 ## Note
 
 The Codex container includes many common utilities installed via `pipx`. Run `pipx list` if you need to see the available tools.
+
+## Progress Tracking
+
+- [ ] Implement minimum viable analyzer
+
+See `tests/AGENTS.md` for task-specific instructions.
